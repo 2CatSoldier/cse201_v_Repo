@@ -56,7 +56,6 @@ router.get('/:key/:val', async (req, res) => {
     let applications;
     if (req.params.key == 'tags') {
       applications = await searchByTags(req.params.val.split(' '))
-      console.log('trigger')
     }
     else {
       applications = await loadAllApplicationsMatching(
